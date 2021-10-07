@@ -9,7 +9,7 @@ import useStyles from './style'
 const PlaceDetails = ({ place, selected, refProp }) => {
     const classes = useStyles();
     // scrollIntoView is a built-in function
-    console.log(refProp)
+    // console.log(refProp)
     if (selected) refProp?.current?.scrollIntoView({ behavior: "smooth", block: "start" })
 
     return (
