@@ -6,8 +6,11 @@ import Rating from '@material-ui/lab/Rating';
 
 import useStyles from './style'
 
-const PlaceDetails = ({ place }) => {
+const PlaceDetails = ({ place, selected, refProp }) => {
     const classes = useStyles();
+    // scrollIntoView is a built-in function
+    console.log(refProp)
+    if (selected) refProp?.current?.scrollIntoView({ behavior: "smooth", block: "start" })
 
     return (
         <Card elevation={6}>
